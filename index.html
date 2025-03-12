@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Mirim Educação</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-img"></div>
+            <h1>Mirim Reforço Escolar: Do 5º ao 9º Ano</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#institucional">Reforço Escolar </a></li>
+                <li><a href="#educação">Educação </a></li>
+                <li><a href="#ensino">Ensino </a></li>
+                <li><a href="#login" onclick="showLogin()">Login </a></li>
+                <!-- <li><a href="#Cadastro">Cadastro</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Page -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="img/logoMirim.png" alt="Logo Mirim" id="logotipo">
+            <div class="hero-text">
+                <h2>A Educação que Transforma</h2>
+                <p>Ensino fundamental I e II: do 5º ao 9º - Anos Finais</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Método de Ensino</button>
+                    <button class="btn-primary">Matricule-se</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Login</h3>
+            <form id="loginForm">
+                <input type="email" placeholder="E-mail ou CPF" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <button onclick="showRegister()">Cadastrar-se</button>
+        </div>
+    </div>
+
+    <!-- Galeria de Imagens -->
+    <div class="image-gallery">
+        <a href="imagem01.jpeg"><img src="img/imagem01.jpeg" alt="Imagem 1"></a>
+        <a href="imagem02.jpeg"><img src="img/imagem02.jpeg" alt="Imagem 2"></a>
+        <a href="imagem03.jpeg"><img src="img/imagem03.jpeg" alt="Imagem 3"></a>
+        <!-- <a href="imagem04.jpeg"><img src="img/imagem04.jpeg" alt="Imagem 4"></a> -->
+        <a href="imagem05.jpeg"><img src="img/imagem05.jpeg" alt="Imagem 5"></a>
+    </div>
+
+    <!-- Portal do Responsável -->
+    <section id="portal" class="hidden">
+        <h2>Portal do Responsável</h2>
+        <div class="crud-section">
+            <button onclick="openEditModal()">Editar Contato</button>
+            <div id="contacts-list"></div>
+        </div>
+    </section>
+</body>
+</html>
