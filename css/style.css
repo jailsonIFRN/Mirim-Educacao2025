@@ -76,23 +76,26 @@ nav ul li a {
 
 .hero-text {
     max-width: 500px;
+    text-align: center;
+    color: #fff;
 }
 
 .hero-text h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 70px;
+    align-items: center;
 }
 
 /* Responsividade */
@@ -156,7 +159,7 @@ nav ul li a {
     width: 100%;
     padding: 10px;
     background: #007bff;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
