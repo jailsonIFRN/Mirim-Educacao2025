@@ -3,79 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
     <title>Mirim Educação</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <div class="logo-img"></div>
-            <h1>Mirim Reforço Escolar: Do 5º ao 9º Ano</h1>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="brand">
+                <img src="img/logoMirim01.png" alt="Logo Mirim" class="logo">
+                <div class="brand-text">
+                    <h1>Mirim Reforço Escolar</h1>
+                    <p>Do 5º ao 9º Ano</p>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <!-- <button class="mobile-menu" aria-label="Abrir menu"><i class="fas fa-bars"></i></button> -->
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link"><i class="fas fa-rocket"></i>Sobre Nós</a></li>
+                    <li><a href="#method" class="nav-link"><i class="fas fa-atom"></i>Método</a></li>
+                    <li><a href="#plans" class="nav-link"><i class="fas fa-gem"></i>Planos</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contato</a></li>
+                    <li><a href="#login" class="nav-link cta-link" onclick="showLogin()"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#institucional">Reforço Escolar </a></li>
-                <li><a href="#educação">Educação </a></li>
-                <li><a href="#ensino">Ensino </a></li>
-                <li><a href="#login" onclick="showLogin()">Login </a></li>
-                <!-- <li><a href="#Cadastro">Cadastro</a></li> -->
-            </ul>
-        </nav>
-     
     </header>
 
-    <!-- Landing Page -->
-    <section id="hero">
-        <div class="hero-content">
-            <img src="img/logoMirim.png" alt="Logo Mirim" id="logotipo">
-            <div class="hero-text">
-                <h2>Reforço Escolar on-line: A Educação que Transforma</h2>
-                <p>Ensino fundamental I e II: do 5º ao 9º - Anos Finais</p>
-                 <!-- Galeria de Imagens -->
-            <div class="image-gallery">
-            <!-- <div><a href="imagem01.jpeg"><img src="img/imagem01.jpeg" alt="Imagem 1"></a></div><br> -->
-            <div><a href="imagem02.jpeg"><img src="img/imagem02.jpeg" alt="Imagem 2"></a></div><br>
-            <!-- <div><a href="imagem03.jpeg"><img src="img/imagem03.jpeg" alt="Imagem 3"></a></div><br> -->
-            <div><a href="imagem05.jpeg"><img src="img/imagem05.jpeg" alt="Imagem 5"></a></div><br>
-            </div>
-                <div class="hero-buttons">
-                    <div><button class="btn-primary">Método de Ensino</button></div>
-                    <div><button class="btn-primary">Matricule-se</button></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-subtitle">Educação Transformadora</span>
+                    <h2 class="hero-title">Aprenda de Forma<br><span>Divertida e Eficiente</span></h2>
+                    <p class="hero-description">Aulas de Reforço escolar online, com aulas interativas de Matemática, Português e Informática 
+                        para alunos do fundamental II do 5º ao 9º ano.</p>
+                    <div class="hero-cta">
+                        <a href="#plans" class="cta-button primary"><i class="fas fa-star"></i>Comece Agora</a>
+                        <a href="#method" class="cta-button secondary"><i class="fas fa-play-circle"></i>Ver Vídeo</a>
+                    </div>
                 </div>
-                
+                <div class="hero-media">
+                    <img src="img/imagem05.jpeg" alt="Estudantes aprendendo" class="hero-image">
+                    <div class="hero-highlights">
+                    
+                    </div>
+                </div>
             </div>
-       
         </div>
     </section>
-    <main>
-         
-  
-        </main>
+
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>Metodologia Ativa</h3>
+                <p>Aprendizagem baseada em projetos e resolução de problemas</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Aulas Gamificadas</h3>
+                <p>Sistema de recompensas e desafios interativos</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Progresso Monitorado</h3>
+                <p>Relatórios detalhados de desempenho em tempo real</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Login</h3>
-            <form id="loginForm">
-                <input type="email" placeholder="E-mail ou CPF" required>
-                <input type="password" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
-            </form>
-            <button onclick="showRegister()">Cadastrar-se</button>
+    <div class="modal" id="loginModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-lock"></i> Acesso ao Portal</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form">
+                    <div class="input-group">
+                        <label><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-lock"></i> Senha</label>
+                        <input type="password" required>
+                    </div>
+                    <button type="submit" class="auth-button"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+                    <div class="auth-links">
+                        <a href="#recover">Esqueceu a senha?</a>
+                        <a href="#register">Criar nova conta</a>
+                    </div>
+                </form>
+                <div class="social-auth">
+                    <p>Ou entre com:</p>
+                    <div class="social-buttons">
+                        <button class="social-button google"><i class="fab fa-google"></i></button>
+                        <button class="social-button facebook"><i class="fab fa-facebook"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-   
-
-    <!-- Portal do Responsável -->
-    <section id="portal" class="hidden">
-        <h2>Portal do Responsável</h2>
-        <div class="crud-section">
-            <button onclick="openEditModal()">Editar Contato</button>
-            <div id="contacts-list"></div>
-        </div>
-    </section>
+    <script src="js/script.js"></script>
 </body>
 </html>
