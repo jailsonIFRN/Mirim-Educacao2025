@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/indexlogin.css">
-    <script src=""></script>
+    <script src="js/scriptLogin.js" defer></script>
 </head>
 <body>
     
     <form action="">
-        <h1>LOGIN</h1>
+        <h1>Login</h1>
     <div>
         <div><label>Email</label></div>
-        <input type="email" name="email" placeholder="seu@email.com"/>
+        <input type="email" name="email" id="
+        email" onchange="validateFields()"  placeholder="seu@email.com"/>
     </div>
     <div>
         <div><label>Senha</label></div>
-        <input type="password" name="password" placeholder="senha"/>
+        <input type="password" name="password" id="password" onchange="validateFields()" placeholder="senha"/>
     </div>
     <div>
-        <button type="button" class="clear">Recuperar senha</button>
+        <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
     </div>
     <div>
-        <button type="button" class="solid">Entrar</button>
+        <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
     </div>
     <div>
         <button type="button" class="outline">Registrar</button>
@@ -35,3 +36,7 @@
     
 </body>
 </html>
+
+<!-- próximo vídeo -->
+<!-- Mensagens de erro no formulário de Login com Javascript - #05 -->
+<!-- https://www.youtube.com/watch?v=Dxg_4kAV9tM&list=PLMbclvogjXZWgHgQcY5H4MvKtEW8q53cC&index=5 -->

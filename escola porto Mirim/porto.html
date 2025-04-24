@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="porto.css">
+    <script src="script.js"></script>
+    <title>Escola Porto Mirim</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-img"></div>
+            <h1>Escola Porto Mirim</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#institucional">Institucional</a></li>
+                <li><a href="#ensino">Ensino</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#login" onclick="showLogin()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Page -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Educação que Transforma</h2>
+            <p>Da Educação Infantil ao Ensino Fundamental I e II</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Matricule-se</button>
+                <button class="btn-secondary">Acesse o Portal</button>
+            </div>
+            <!-- obs01: quando ele a apertar a o botão "matricule-se e acesse o portal, ele vai direto
+             para o que tá dentro da tela de "login". Aí ele coloque o CPF E A SENHA PARA MATRICULAR OU 
+             ACESSA O PORTAL" -->
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Acesso ao Portal</h3>
+            <form id="loginForm">
+                <input type="email" placeholder="E-mail ou CPF" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <button onclick="showRegister()">Criar conta</button>
+        </div>
+    </div>
+<!-- obs:  -->
+    <!-- Galeria de Imagens -->
+    <div class="image-gallery">
+        <a href="imagem01.jpeg"><img src="imagem01.jpeg" alt="Imagem 1"></a>
+        <a href="imagem02.jpeg"><img src="imagem02.jpeg" alt="Imagem 2"></a>
+        <a href="imagem03.jpeg"><img src="imagem03.jpeg" alt="Imagem 3"></a>
+        <a href="imagem04.jpeg"><img src="imagem06.jpeg" alt="Imagem 4"></a>
+        <a href="imagem05.jpeg"><img src="imagem05.jpeg" alt="Imagem 5"></a>
+    </div>
+
+    <!-- CRUD Example (Parent Portal) -->
+    <section id="portal" class="hidden">
+        <h2>Portal do Responsável</h2>
+        <div class="crud-section">
+            <button onclick="openEditModal()">Editar Contato</button>
+            <div id="contacts-list"></div>
+        </div>
+    </section>
+</body>
+</html>

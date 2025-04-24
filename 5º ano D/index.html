@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada da Multiplicação</title>
+    <link rel="stylesheet" href="estilos_tabuada_multiplicacao.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabuada da Multiplicação</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="options">
+                <button class="option" onclick="checkAnswer(this)"></button>
+                <button class="option" onclick="checkAnswer(this)"></button>
+                <button class="option" onclick="checkAnswer(this)"></button>
+            </div>
+            <p id="answer"></p>
+        </div>
+        <div id="result-container" style="display:none;">
+            <p id="result"></p>
+            <button onclick="restartGame()">Reiniciar o Jogo</button>
+        </div>
+    </div>
+    <script src="tabuada_multiplicacao.js"></script>
+</body>
+</html>

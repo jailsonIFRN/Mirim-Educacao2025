@@ -1,23 +1,38 @@
 
-        // // Funcionalidades JavaScript
-        // function showLogin() {
-        //     document.getElementById('loginModal').style.display = 'block';
-        // }
+// Pegar o valor do campo de email
+function validateFields() {
+        const emailValid = isEmailValid();
+        document.getElementById('recover-password-button').disabled = !emailValid;
 
-        // function closeModal() {
-        //     document.getElementById('loginModal').style.display = 'none';
-        // }
+         // verificar se o email não é vazio e se o email é válido
+         const passwordValid = isPasswordValid();
+         document.getElementById('login-button').disabled = !emailValid || !passwordValid;
+        // verificar se o email não é vazio e se o email é válido
+        // se verdadeiro, então habilitar o botão de recuperar senha
+        // se falso, então desabilitar o botão de recuperar senha
 
-        // function showRegister() {
-        //     const form = `
-        //         <h3>Cadastro</h3>
-        //         <form id="registerForm">
-        //             <input type="text" placeholder="Nome do aluno" required>
-        //             <input type="email" placeholder="Email" required>
-        //             <button type="submit">Cadastrar</button>
-        //         </form>
-        //     `;
-        //     document.querySelector('.modal-content').innerHTML = form;
-        // }
+function isEmailValid() {
+        const email = document.getElementById("email").value;
+        if (!email) {
+                return false;
+        }
+
+        return validateEmail(email);
+
+}
+
+function isPasswordValid() {
+        const password = document.getElementById('password').value;
+        if (!password) {
+                return false;
+        }
+        return true;
+}
+} 
+
+function validateEmail(email) {
+        return /\S+@\S+\.\S/.test(email);
+}
+
 
         
